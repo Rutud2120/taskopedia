@@ -1,45 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./CSS/style.css";
-import Header from "./CSS/header.jsx";
-import Student from "./CSS/student.jsx";
+import Header from "./Layout/Header.jsx";
+import Footer from "./Layout/Footer.jsx";
+import MainBody from "./MainBody.jsx";
+
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
 
-function MainBody() {
-  const whatWeWillLearn = "React";
-  const totalLecture = 3;
-  return (
-    <div>
-      <p>Total Lecture - {totalLecture}</p>
-      <p>In this course, we will learn {whatWeWillLearn} using Taskopedia</p>
-      <ul>
-        <li>Basic Foundation</li>
-        <li>Functional and class components</li>
-      </ul>
-      {/* <div>
-        Enter task: <input maxLength={5} readOnly={true}></input>
-      </div> */}
-    </div>
-  );
-}
-
-function Footer() {
-  return (
-    <h4 style={{ color: "gray", backgroundColor: "black" }}>Happy Coding</h4> // using object notation
-  );
-}
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div className="container">
+  <div style={{ color: "grey" }}>
     <Header />
-    <MainBody />
-    <div className="row">Students enrolled</div>
-    <Student progExp={4} fullName="Rutuja Deshmukh" />
-    <Student progExp={3} fullName="Anishk Singh" />
-    <Student progExp={3.5} fullName="Anant Sinha" />
-    <Student progExp={3.1} fullName="Survesh Mandhare" />
+    <div className="px-4">
+      <MainBody />
+    </div>
     <Footer />
   </div>
 );
